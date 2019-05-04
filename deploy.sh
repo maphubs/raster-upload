@@ -3,7 +3,7 @@ NODE_ENV=production
 PACKAGE_VERSION=`node -p "require('./version.json').version"`
 
 #docker build
-docker pull mhart/alpine-node:10
+docker pull node:8
 docker build . --rm -t quay.io/maphubs/raster-upload:v$PACKAGE_VERSION
 
 #commit version tag
