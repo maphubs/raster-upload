@@ -5,7 +5,7 @@ var path = require('path')
 const config = {
   API_KEY: getenv('API_KEY'),
   CDN_URL: getenv('CDN_URL'),
-  S3_BUCKET: getenv('S3_BUCKET'),
+  STORAGE_PATH: getenv('STORAGE_PATH', path.join(__dirname, '/temp/tiles')),
   UPLOAD_TEMP_PATH: getenv('UPLOAD_TEMP_PATH', path.join(__dirname, '/temp'))
 }
 

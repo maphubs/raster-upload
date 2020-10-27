@@ -11,6 +11,8 @@ app.enable('trust proxy')
 app.disable('x-powered-by')
 app.use('*', cors({ origin: '*' }))
 
+app.use('/tiles', express.static(config.STORAGE_PATH))
+
 // check if API key is present
 app.use((request, response, next) => {
   if (request.headers.authorization) {
